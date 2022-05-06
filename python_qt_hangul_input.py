@@ -132,9 +132,14 @@ class PythonQtHangulInputFilter(QObject):
                 'A instance of QCoreApplication is not present.'
             )
 
+        self.__is_hangul_mode: bool = False
+        self.__do_not_remove_prev_chr: bool = False
+        self.__prev_keys: List[Tuple[_Status_Types, int]] = []
+
+    def reset(self):
         self.__is_hangul_mode = False
         self.__do_not_remove_prev_chr = False
-        self.__prev_keys: List[Tuple[_Status_Types, int]] = []
+        self.__prev_keys = []
 
     def eventFilter(self, source: QObject, event: QEvent) -> bool:
         if isinstance(event, QFocusEvent)\
