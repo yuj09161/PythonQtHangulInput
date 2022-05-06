@@ -1,3 +1,8 @@
+# SPDX-License-Identifier: MIT
+# Copyright @ Yunseong Ha
+# For more information, see
+# https://github.com/yuj09161/PythonQtHangulInput/blob/master/LICENSE
+
 from PySide6.QtCore import QCoreApplication, QObject, QEvent, Qt, Signal
 from PySide6.QtGui import QFocusEvent, QKeyEvent
 from PySide6.QtWidgets import QDialog, QHBoxLayout, QLabel, QWidget
